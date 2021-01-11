@@ -4,3 +4,4 @@ export { default as RegistrationScreen } from './RegistrationScreen/Registration
 export { default as ProfileScreen } from './ProfileScreen/ProfileScreen'
 export { default as EditProfileScreen } from './EditProfileScreen/EditProfileScreen'
 export { default as JobScreen } from './JobScreen/JobScreen'
+export { default as DrawerScreen } from './DrawerScreen/DrawerScreen'

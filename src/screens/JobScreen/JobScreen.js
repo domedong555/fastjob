@@ -71,6 +71,12 @@ export default function JobScreen({ navigation, route }) {
                         บริษัท {item.text}
                     </Text>
                     <Text>
+                        ที่อยู่ {item.address}
+                    </Text>
+                    <Text>
+                        จังหวัด {item.province}
+                    </Text>
+                    <Text>
                         งาน {item.job}
                     </Text>
                     <Text>

@@ -46,7 +46,10 @@ export default function RegistrationScreen({navigation}) {
         console.log(result);
     
         if (!result.cancelled) {
-            setImage(result.uri) 
+            setImage(result.uri);
+            var storageRef = firebase.storage().ref()
+            var imageRef = storageRef.child("images/avatar.png")
+            imageRef.putString(result.base64)
             .then(() => {
                 Alert.alert("Success");
             })
@@ -112,7 +115,7 @@ export default function RegistrationScreen({navigation}) {
                     underlineColorAndroid="transparent"
                     autoCapitalize="none"
                 />
-                <Picker
+                {/* <Picker
                     selectedValue={gender}
                     style={styles.input}
                     onValueChange={(itemValue, itemIndex) => setGender(itemValue)}
@@ -132,6 +135,9 @@ export default function RegistrationScreen({navigation}) {
                     <Picker.Item label="Tourism and Hotel" value="Tourism and Hotel" />
                     <Picker.Item label="Graphic Designer" value="Graphic Designer" />
                 </Picker>
+                <DateTimePicker>
+                    
+                </DateTimePicker> */}
                 <TextInput
                     style={styles.input}
                     placeholder='Experience'
